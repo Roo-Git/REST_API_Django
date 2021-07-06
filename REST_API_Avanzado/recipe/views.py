@@ -22,7 +22,7 @@ class TagViewSet(viewsets.GenericViewSet, mixins.ListModelMixin, mixins.CreateMo
         """ Crear nuevo tag """
         serializer.save(user=self.request.user)
 
-class IngredientViewSet(viewsets.GenericViewSet, mixins.ListModelMixin):
+class IngredientViewSet(viewsets.GenericViewSet, mixins.ListModelMixin, mixins.CreateModelMixin):
     """ Manejar los Ingredientes en la BBDD """
     authentication_classes = (TokenAuthentication,)
     permission_classes = (IsAuthenticated,)
@@ -32,3 +32,7 @@ class IngredientViewSet(viewsets.GenericViewSet, mixins.ListModelMixin):
     def get_queryset(self):
         """ Filtrar y mostrar por nombre los Ingredientes del usuario autenticado """
         return self.queryset.filter(user=self.request.user).order_by('-name')
+
+    def perform_create(self, serializer):
+        """ Crear nuevo Ingrediente """
+        serializer.save(user=self.request.user)
