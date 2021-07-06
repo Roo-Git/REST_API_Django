@@ -31,3 +31,15 @@ class IngredientViewSet(BaseRecipeViewSet):
     """ Manejar los Ingredientes en la base de datos """
     queryset = Ingredient.objects.all()
     serializer_class = serializers.IngredientSerializer
+
+class RecipeViewSet(viewsets.ModelViewSet):
+    """ Manejar los Ingredientes en la base de datos """
+    serializer_class = serializers.RecipeSerializer
+    queryset = Recipe.objects.all()
+    authentication_classes = (TokenAuthentication,)
+    permission_classes = (IsAuthenticated,)
+
+    def get_queryset(self):
+        """ Retonar objetos para el usuario autenticado """
+        return self.queryset.filter(user=self.request.user)
+    
