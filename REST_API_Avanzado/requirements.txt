@@ -1,14 +1,17 @@
 django==3.0.8
 djangorestframework==3.11.0
 
+# Activar entorno virtual: source virtualenv/bin/activate
+
+# Desactivar entorno virtual: deactivate
 
 # INSTALAR los paquetes necesarios: pip3 install -r requirements.txt
 
 # LISTA DE COMANDOS: python manage.py --help
 
-# Crear proyecto de Django: django-admin startproject app .
+# Crear proyecto de Django: django-admin startproject nombre .
 
-# Crear app-core: python manage.py startapp core
+# Crear app: python manage.py startapp nombre
 
 # Definimos la app-core en settings [INSTALLED_APPS]
 
