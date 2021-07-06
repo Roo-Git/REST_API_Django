@@ -56,7 +56,7 @@ class ModelTest(TestCase):
 
   def test_ingredient_str(self):
     """ Probar representación en cadena de texto del ingrediente """
-    tag = models.Ingredient.objects.create(
+    ingredient = models.Ingredient.objects.create(
       user=sample_user(),
       name='Banana'
     )
