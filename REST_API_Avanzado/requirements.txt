@@ -1,0 +1,18 @@
+django==3.0.8
+djangorestframework==3.11.0
+
+
+# INSTALAR los paquetes necesarios: pip3 install -r requirements.txt
+
+# LISTA DE COMANDOS: python manage.py --help
+
+# Crear proyecto de Django: django-admin startproject app .
+
+# Crear app-core: python manage.py startapp core
+
+# Definimos la app-core en settings [INSTALLED_APPS]
+
+# Creamos folder tests y archivos __init__.py y test_models.py
+
+# Comando para migraciones: python manage.py makemigrations core && 
+
