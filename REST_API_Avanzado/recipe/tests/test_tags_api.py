@@ -15,7 +15,7 @@ class PublicTagsApiTests(TestCase):
     """ Probar los API tags disponibles publicamente """
 
     def setUp(self):
-        self.client = API
+        self.client = APIClient()
 
     def test_login_required(self):
         """ Prueba que Login sea requerido para obtener los tags """
