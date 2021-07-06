@@ -42,4 +42,13 @@ class RecipeViewSet(viewsets.ModelViewSet):
     def get_queryset(self):
         """ Retonar objetos para el usuario autenticado """
         return self.queryset.filter(user=self.request.user)
+
+    def get_serializer_class(self):
+        """ Retorna el serializador adecuado """
+        if self.action == 'retrieve':
+            return serializers.RecipeDetailSerializer
+
+        return self.serializer_class
+
+
     
