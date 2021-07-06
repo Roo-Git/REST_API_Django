@@ -44,11 +44,13 @@ class RecipeViewSet(viewsets.ModelViewSet):
         return self.queryset.filter(user=self.request.user)
 
     def get_serializer_class(self):
-        """ Retorna el serializador adecuado """
+        """ Retorna Clase de Serializador Apropiado """
         if self.action == 'retrieve':
             return serializers.RecipeDetailSerializer
 
         return self.serializer_class
 
 
-    
+    def perform_create(self, serializer):
+        """ Crear Nueva Receta """
+        serializer.save(user=self.request.user)    
