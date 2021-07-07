@@ -127,7 +127,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
-MEDIA_ROOT = '/media_root/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'AppAxf/static/uploads/')
 STATIC_ROOT = '/static_root/'
 
 AUTH_USER_MODEL = 'core.User'
