@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
 
+
 from django.conf import settings
 
 class UserManager(BaseUserManager):
@@ -71,3 +72,4 @@ class Recipe(models.Model):
     tags = models.ManyToManyField('Tag')
     def __str__(self):
         return self.title
+
