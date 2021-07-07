@@ -1,0 +1,19 @@
+# Activar entorno virtual: source virtualenv/bin/activate
+
+# Desactivar entorno virtual: deactivate
+
+# INSTALAR los paquetes necesarios: pip3 install -r requirements.txt
+
+# LISTA DE COMANDOS: python manage.py --help
+
+# Crear proyecto de Django: django-admin startproject nombre .
+
+# Crear app: python manage.py startapp nombre
+
+# Definimos la app-core en settings [INSTALLED_APPS]
+
+# Creamos folder tests y archivos __init__.py y test_models.py
+
+# Comando para migraciones: python manage.py makemigrations core && python manage.py migrate
+
+# Testing: python manage.py test
