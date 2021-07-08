@@ -17,3 +17,5 @@
 # Comando para migraciones: python manage.py makemigrations core && python manage.py migrate
 
 # Testing: python manage.py test
+
+# Test
